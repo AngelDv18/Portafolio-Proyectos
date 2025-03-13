@@ -508,7 +508,6 @@ footer a:hover {
 
 */
 
-
 /* Estilos generales */
 body {
     padding-top: 80px;
@@ -523,6 +522,9 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     padding: 1rem;
     transition: padding 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .navbar .nav-link {
@@ -534,6 +536,47 @@ body {
     color: #fff !important;
     transform: translateY(-2px);
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Botón "Regresar" */
+.btn-regresar {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #6c757d;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-regresar:hover {
+    background-color: #5a6268;
+}
+
+.btn-regresar i {
+    margin-right: 5px;
+}
+
+/* Botón "Descargar CV" */
+.btn-download {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-download:hover {
+    background-color: #0056b3;
+}
+
+.btn-download i {
+    margin-right: 5px;
 }
 
 /* Nombre con efecto de gradiente */
@@ -862,17 +905,35 @@ footer a:hover {
 }
 
 /* Barras de habilidades */
+/* Contenedor de la barra de progreso */
 .skill-container {
-    width: 90%;
-    background-color: #4d4d4d;
-    margin: 5px 10px;
+    width: 100%;
+    background-color: #e0e0e0; /* Color de fondo de la barra */
     border-radius: 5px;
-    overflow: hidden;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    position: relative;
+    height: 10px;
 }
 
+/* Barra de progreso */
 .skill {
-    height: 10px;
-    background-color: white;
+    height: 100%;
+    border-radius: 5px;
+    background-color: #5a5959; /* Color de la barra de progreso */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Porcentaje al lado de la barra */
+.skill-percentage {
+    position: absolute;
+    right: 10px; /* Posición del porcentaje */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: #000; /* Color del texto del porcentaje */
 }
 
 .html { width: 90%; }

@@ -6,12 +6,15 @@
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Regresar</a>
+            <a class="navbar-brand btn-regresar" href="index.html">
+                <i class="material-icons">arrow_back</i> Regresar
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -43,42 +46,46 @@
 
                 <div class="box-1">
                     <div class="heading">
-                        <p>LENGUAJES</p>
+                        <p>Habilidades - LENGUAJES</p>
                     </div>
 
                     <p class="p1">
-                        HTML CSS
+                        HTML5, CSS3
                         <div class="skill-container">
-                            <div class="skill html"></div>
+                            <div class="skill html" style="width: 40%;"></div>
+                            <span class="skill-percentage">40%</span>
                         </div>
                     </p>
 
-                    <p class="p1">
-                        BASES DE DATOS
-                        <div class="skill-container">
-                            <div class="skill css"></div>
-                        </div>
-                    </p>
+              <p class="p1">
+        C#, .NET
+        <div class="skill-container">
+            <div class="skill csharp" style="width: 50%;"></div>
+            <span class="skill-percentage">50%</span>
+        </div>
+    </p>
 
-                    <p class="p1">
-                        JAVASCRIPT
-                        <div class="skill-container">
-                            <div class="skill js"></div>
-                        </div>
-                    </p>
+    <p class="p1">
+        Python
+        <div class="skill-container">
+            <div class="skill python" style="width: 20%;"></div>
+            <span class="skill-percentage">20%</span>
+        </div>
+    </p>
 
-                    <p class="p1">
-                        Python
-                        <div class="skill-container">
-                            <div class="skill jquery"></div>
-                        </div>
-                    </p>
+    <p class="p1">
+        Bases de Datos
+        <div class="skill-container">
+            <div class="skill db" style="width: 20%;"></div>
+            <span class="skill-percentage">20%</span>
+        </div>
+    </p>
                 </div>
                 <br>
 
                 <div class="box-1">
                     <div class="heading">
-                        <p>SKILLS</p>
+                        <p>Habilidades - Blandas</p>
                     </div>
 
                     <p class="p1">
@@ -101,7 +108,7 @@
             <div class="right">
                 <div class="name-div">
                     <h1>Angel David Garcia Garcia</h1>
-                    <p>DESARROLLADOR WEB</p>
+                    <p>Desarrollador Fron-End | Estudiante de Ingenieria de Software</p>
                 </div>
 
                 <div class="box-2">
@@ -116,8 +123,7 @@
 
                 <div class="box-2">
                     <h2>FORMACIÓN ACADEMICA <i class="material-icons icons3">border_color</i></h2>
-                    <p class="p3">Septiembre 2022 
-                        Presente <span>Universidad Politécnica de Quintana Roo</span></p>
+                    <p class="p3">Septiembre 2022 - Presente <span>Universidad Politécnica de Quintana Roo</span></p>
                     <p class="p2">
                         Ingeniería en Software
                     </p>
@@ -172,6 +178,7 @@
             html2pdf().from(element).set(options).save();
         }
     </script>
+
 </body>
 
 </html>
