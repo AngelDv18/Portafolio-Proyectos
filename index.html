@@ -1,221 +1,370 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portafolio - Angel García</title>
 
-    <link rel="icon" href="https://icons.getbootstrap.com/assets/icons/file-earmark-person.svg">
+    <link
+      rel="icon"
+      href="https://icons.getbootstrap.com/assets/icons/file-earmark-person.svg"
+    />
 
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-    
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon-16x16.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/apple-touch-icon.png"
+    />
+
     <!--lol Bootstrap 5 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- tu estas loco Desde Bootstrap Iconos-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    
-    <!-- Estilos personalizados -->
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <div class="container">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
+    <!-- tu estas loco Desde Bootstrap Iconos-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#about">Acerca de mi</a></li>
-                <li class="nav-item"><a class="nav-link" href="#skills">Habilidades</a></li>
-                <li class="nav-item"><a class="nav-link" href="#projects">Proyectos</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
-                <li class="nav-item"><a class="nav-link" href="cv/cv.html">Ver CV</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">
+                        <i class="bi bi-person me-1"></i>Acerca de mí
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">
+                        <i class="bi bi-gear me-1"></i>Habilidades
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">
+                        <i class="bi bi-folder me-1"></i>Proyectos
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">
+                        <i class="bi bi-envelope me-1"></i>Contacto
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn-cv" href="cv/cv.html">
+                        <i class="bi bi-file-person me-1"></i>Ver CV
+                    </a>
+                </li>
             </ul>
         </div>
-    </div>
-</nav>
+      </div>
+    </nav>
 
-<main class="container">
-    <header class="text-center py-5 mt-5">
+    <main class="container">
+      <header class="text-center py-5 mt-5">
         <h1 class="display-4 fw-bold">Angel David García Garcia</h1>
-        <p class="lead text-muted">Estudiante de Ingeniería en Software | Desarrollador Front-end</p>
-    </header>
+        <p class="lead text-muted">
+          Estudiante de Ingeniería en Software | Desarrollador Front-end
+        </p>
+      </header>
 
-    <!-- Sección Acerca de -->
-    <section id="about" class="py-5">
+      <!-- Sección Acerca de -->
+      <section id="about" class="py-5">
         <div class="card shadow">
-            <div class="card-body">
-                <div class="row align-items-center">
-                    <div class="col-md-4 text-center">
-                     <img src="images/image_me.png" class="img-fluid rounded-circle mb-4" style="width: 200px; height: 200px; object-fit: cover;">
-                    </div>
-                    <div class="col-md-8">
-                        <h2 class="h3 mb-4">Acerca de mí</h2>
-                        <p class="lead">
-                            Desarrollador front-end con pasión por crear soluciones digitales innovadoras. 
-                            Actualmente cursando el 8vo cuatrimestre de Ingeniería de Software. Experiencia en 
-                            desarrollo web y aplicaciones desktop.
-                        </p>
-                    </div>
-                </div>
+          <div class="card-body">
+            <div class="row align-items-center">
+              <div class="col-md-4 text-center">
+                <img
+                  src="images/image_me.png"
+                  class="img-fluid rounded-circle mb-4"
+                  style="width: 200px; height: 200px; object-fit: cover"
+                />
+              </div>
+              <div class="col-md-8">
+                <h2 class="h3 mb-4">Acerca de mí</h2>
+                <p class="lead">
+                  Desarrollador front-end con pasión por crear soluciones
+                  digitales innovadoras. Actualmente cursando el 8vo
+                  cuatrimestre de Ingeniería de Software. Experiencia en
+                  desarrollo web y aplicaciones desktop.
+                </p>
+              </div>
             </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- Sección Habilidades -->
-    <section id="skills" class="py-5">
+      <!-- Sección Habilidades -->
+      <section id="skills" class="py-5">
         <div class="card shadow">
-            <div class="card-body">
-                <h2 class="h3 mb-4 text-center">Mis Habilidades</h2>
-                <div class="row justify-content-center">
-                    <div class="col-auto text-center">
-                       <img src="images/html_5_icon.png" alt="HTML5" class="skill-icon">
-                        <p class="mt-2">HTML5</p>
-                    </div>
-                    <div class="col-auto text-center">
-                        <img src="images/css_logo_icon.png" alt="CSS3" class="skill-icon">
-                        <p class="mt-2">CSS3</p>
-                    </div>
-                    <div class="col-auto text-center">
-                        <img src="images/icon_javascript.png" alt="JavaScript" class="skill-icon">
-                        <p class="mt-2">JavaScript</p>
-                    </div>
-                    <div class="col-auto text-center">
-                        <img src="images/c_sharp_icon.png" alt="C#" class="skill-icon">
-                        <p class="mt-2">C#</p>
-                    </div>
-                    <div class="col-auto text-center">
-                       <img src="images/icon_python.png" alt="Python" class="skill-icon">
-                        <p class="mt-2">Python</p>
-                    </div>
-                    <div class="col-auto text-center">
-                        <img src="images/net_core_icon.png" alt=".NET" class="skill-icon">
-                        <p class="mt-2">.NET</p>
-                    </div>
-                    <div class="col-auto text-center">
-                        <img src="images/mysql_logo_icon.png" alt="SQL" class="skill-icon">
-                        <p class="mt-2">SQL</p>
-                    </div>
-                </div>
+          <div class="card-body">
+            <h2 class="h3 mb-4 text-center">Mis Habilidades</h2>
+            <div class="row justify-content-center">
+              <div class="col-auto text-center">
+                <img
+                  src="images/html_5_icon.png"
+                  alt="HTML5"
+                  class="skill-icon"
+                />
+                <p class="mt-2">HTML5</p>
+              </div>
+              <div class="col-auto text-center">
+                <img
+                  src="images/css_logo_icon.png"
+                  alt="CSS3"
+                  class="skill-icon"
+                />
+                <p class="mt-2">CSS3</p>
+              </div>
+              <div class="col-auto text-center">
+                <img
+                  src="images/icon_javascript.png"
+                  alt="JavaScript"
+                  class="skill-icon"
+                />
+                <p class="mt-2">JavaScript</p>
+              </div>
+              <div class="col-auto text-center">
+                <img
+                  src="images/c_sharp_icon.png"
+                  alt="C#"
+                  class="skill-icon"
+                />
+                <p class="mt-2">C#</p>
+              </div>
+              <div class="col-auto text-center">
+                <img
+                  src="images/icon_python.png"
+                  alt="Python"
+                  class="skill-icon"
+                />
+                <p class="mt-2">Python</p>
+              </div>
+              <div class="col-auto text-center">
+                <img
+                  src="images/net_core_icon.png"
+                  alt=".NET"
+                  class="skill-icon"
+                />
+                <p class="mt-2">.NET</p>
+              </div>
+              <div class="col-auto text-center">
+                <img
+                  src="images/mysql_logo_icon.png"
+                  alt="SQL"
+                  class="skill-icon"
+                />
+                <p class="mt-2">SQL</p>
+              </div>
             </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- Sección Proyectos -->
-    <section id="projects" class="py-5">
+      <!-- Sección Proyectos -->
+      <section id="projects" class="py-5">
         <h2 class="h3 mb-4 text-center">Mis Proyectos</h2>
         <div class="row g-4">
-            <!-- Proyecto 1 -->
-            <div class="col-md-4">
-                <div class="card h-100 shadow">
-                    <img src="images/sigie.png" class="card-img-top project-img" alt="Aplicación de Escritorio">
-                    <div class="card-body">
-                        <h5 class="card-title">Aplicación (SIGIE)</h5>
-                        <p class="card-text text-muted">Aplicación de Escritorio.</p>
-                        <a href="views_projects/proyect1.html" class="btn btn-primary">Ver Resumen</a>
-                    </div>
-                </div>
+          <!-- Proyecto 1 -->
+          <div class="col-md-4">
+            <div class="card h-100 shadow">
+              <img
+                src="images/sigie.png"
+                class="card-img-top project-img"
+                alt="Aplicación de Escritorio"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Aplicación (SIGIE)</h5>
+                <p class="card-text text-muted">Aplicación de Escritorio.</p>
+                <a href="views_projects/proyect1.html" class="btn btn-primary"
+                  >Ver Resumen</a
+                >
+              </div>
             </div>
-            
-            <!-- Proyecto 2 -->
-            <div class="col-md-4">
-                <div class="card h-100 shadow">
-                    <img src="images/invent.png" class="card-img-top project-img" alt="Inventario Hotel">
-                    <div class="card-body">
-                        <h5 class="card-title">Inventario Hotel</h5>
-                        <p class="card-text text-muted">Aplicación de Escritorio para organizaciónes de Almacen.</p>
-                        <a href="views_projects/proyect2.html" class="btn btn-primary">Ver Resumen</a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Proyecto 3 -->
-            <div class="col-md-4">
-                <div class="card h-100 shadow">
-                    <img src="images/clinic.png" class="card-img-top project-img" alt="Clinica - UPQROO">
-                    <div class="card-body">
-                        <h5 class="card-title">Clinica UPQROO</h5>
-                        <p class="card-text text-muted">Sitio web para consultorio de la escuela en fisio terapia.</p>
-                        <a href="views_projects/proyect3.html" class="btn btn-primary">Ver Resumen</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+          </div>
 
-    <!-- Sección Contacto -->
- <section id="contact" class="py-5">
-    <div class="card shadow">
-        <div class="card-body">
+          <!-- Proyecto 2 -->
+          <div class="col-md-4">
+            <div class="card h-100 shadow">
+              <img
+                src="images/invent.png"
+                class="card-img-top project-img"
+                alt="Inventario Hotel"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Inventario Hotel</h5>
+                <p class="card-text text-muted">
+                  Aplicación de Escritorio para organizaciónes de Almacen.
+                </p>
+                <a href="views_projects/proyect2.html" class="btn btn-primary"
+                  >Ver Resumen</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Proyecto 3 -->
+          <div class="col-md-4">
+            <div class="card h-100 shadow">
+              <img
+                src="images/clinic.png"
+                class="card-img-top project-img"
+                alt="Clinica - UPQROO"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Clinica UPQROO</h5>
+                <p class="card-text text-muted">
+                  Sitio web para consultorio de la escuela en fisio terapia.
+                </p>
+                <a href="views_projects/proyect3.html" class="btn btn-primary"
+                  >Ver Resumen</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección Contacto -->
+      <section id="contact" class="py-5">
+        <div class="card shadow">
+          <div class="card-body">
             <h2 class="h3 mb-4 text-center">Contacto</h2>
             <div class="row g-4">
-                <div class="col-md-6 text-center">
-                    <div class="mb-4">
-                        <a href="https://github.com/AngelDv18" class="text-decoration-none" target="_blank">
-                            <i class="bi bi-github h3 text-primary"></i>
-                        </a>
-                        <h4 class="h5 mt-2">GitHub</h4>
-                        <a href="https://github.com/AngelDv18" class="text-decoration-none" target="_blank">
-                        </a>
-                    </div>
-                    <div class="mb-4">
-                        <a href="https://www.linkedin.com/in/angel-david-garcia-garcia-8b2193233" class="text-decoration-none" target="_blank">
-                            <i class="bi bi-linkedin h3 text-primary"></i>
-                        </a>
-                        <h4 class="h5 mt-2">LinkedIn</h4>
-                        <a href="https://www.linkedin.com/in/angel-david-garcia-garcia-8b2193233" class="text-decoration-none" target="_blank">
-                        </a>
-                    </div>
-                    <div class="mb-4">
-                        <a href="https://www.facebook.com/profile.php?id=100021463512496" class="text-decoration-none" target="_blank">
-                            <i class="bi bi-facebook h3 text-primary"></i>
-                        </a>
-                        <h4 class="h5 mt-2">Facebook</h4>
-                        <a href="https://www.facebook.com/profile.php?id=100021463512496" class="text-decoration-none" target="_blank">
-                        </a>
-                    </div>
+              <div class="col-md-6 text-center">
+                <div class="mb-4">
+                  <a
+                    href="https://github.com/AngelDv18"
+                    class="text-decoration-none"
+                    target="_blank"
+                  >
+                    <i class="bi bi-github h3 text-primary"></i>
+                  </a>
+                  <h4 class="h5 mt-2">GitHub</h4>
+                  <a
+                    href="https://github.com/AngelDv18"
+                    class="text-decoration-none"
+                    target="_blank"
+                  >
+                  </a>
                 </div>
-                <div class="col-md-6 text-center">
-                    <div class="mb-4">
-                        <a href="mailto:angeldavidg879@gmail.com" class="text-decoration-none">
-                            <i class="bi bi-envelope h3 text-primary"></i>
-                        </a>
-                        <h4 class="h5 mt-2">Correo Electrónico</h4>
-                        <a href="mailto:angeldavidg879@gmail.com" class="text-decoration-none">
-                        </a>
-                    </div>
-                    <p class="lead">¡Espero que podamos trabajar juntos! No dudes en contactarme.</p>
+                <div class="mb-4">
+                  <a
+                    href="https://www.linkedin.com/in/angel-david-garcia-garcia-8b2193233"
+                    class="text-decoration-none"
+                    target="_blank"
+                  >
+                    <i class="bi bi-linkedin h3 text-primary"></i>
+                  </a>
+                  <h4 class="h5 mt-2">LinkedIn</h4>
+                  <a
+                    href="https://www.linkedin.com/in/angel-david-garcia-garcia-8b2193233"
+                    class="text-decoration-none"
+                    target="_blank"
+                  >
+                  </a>
                 </div>
+                <div class="mb-4">
+                  <a
+                    href="https://www.facebook.com/profile.php?id=100021463512496"
+                    class="text-decoration-none"
+                    target="_blank"
+                  >
+                    <i class="bi bi-facebook h3 text-primary"></i>
+                  </a>
+                  <h4 class="h5 mt-2">Facebook</h4>
+                  <a
+                    href="https://www.facebook.com/profile.php?id=100021463512496"
+                    class="text-decoration-none"
+                    target="_blank"
+                  >
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-6 text-center">
+                <div class="mb-4">
+                  <a
+                    href="mailto:angeldavidg879@gmail.com"
+                    class="text-decoration-none"
+                  >
+                    <i class="bi bi-envelope h3 text-primary"></i>
+                  </a>
+                  <h4 class="h5 mt-2">Correo Electrónico</h4>
+                  <a
+                    href="mailto:angeldavidg879@gmail.com"
+                    class="text-decoration-none"
+                  >
+                  </a>
+                </div>
+                <p class="lead">
+                  ¡Espero que podamos trabajar juntos! No dudes en contactarme.
+                </p>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-</section>
+      </section>
+    </main>
 
-</main>
-
-<footer class="bg-dark text-white py-4 mt-5">
-    <div class="container text-center">
-        <p class="mb-0">&copy; 2025 Angel D. García. Todos los derechos reservados.</p>
+    <footer class="bg-dark text-white py-4 mt-5">
+      <div class="container text-center">
+        <p class="mb-0">
+          &copy; 2025 Angel D. García. Todos los derechos reservados.
+        </p>
         <div class="mt-4">
-            <a href="https://github.com/AngelDv18" class="text-white me-3" target="_blank">
-                <i class="bi bi-github h4"></i>
-            </a>
-            <a href="https://www.facebook.com/profile.php?id=100021463512496" class="text-white me-3" target="_blank">
-                <i class="bi bi-facebook h4"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/angel-david-garcia-garcia-8b2193233" class="text-white me-3" target="_blank">
-                <i class="bi bi-linkedin h4"></i>
-            </a>
+          <a
+            href="https://github.com/AngelDv18"
+            class="text-white me-3"
+            target="_blank"
+          >
+            <i class="bi bi-github h4"></i>
+          </a>
+          <a
+            href="https://www.facebook.com/profile.php?id=100021463512496"
+            class="text-white me-3"
+            target="_blank"
+          >
+            <i class="bi bi-facebook h4"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/angel-david-garcia-garcia-8b2193233"
+            class="text-white me-3"
+            target="_blank"
+          >
+            <i class="bi bi-linkedin h4"></i>
+          </a>
         </div>
-    </div>
-</footer>
+      </div>
+    </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="scripts/script.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts/script.js"></script>
+  </body>
 </html>

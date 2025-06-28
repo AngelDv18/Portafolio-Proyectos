@@ -87,56 +87,6 @@ body {
     width: 80%;
 }
 
-/* Botones mejorados */
-.btn-regresar, .btn-download {
-    display: inline-flex;
-    align-items: center;
-    padding: 12px 24px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: all var(--transition-medium);
-    border: none;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-}
-
-.btn-regresar {
-    background: linear-gradient(45deg, #6c757d, #5a6268);
-    color: var(--white);
-}
-
-.btn-download {
-    background: linear-gradient(45deg, #007bff, #0056b3);
-    color: var(--white);
-}
-
-.btn-regresar:hover, .btn-download:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-medium);
-}
-
-.btn-regresar::before, .btn-download::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: left 0.5s;
-}
-
-.btn-regresar:hover::before, .btn-download:hover::before {
-    left: 100%;
-}
-
-.btn-regresar i, .btn-download i {
-    margin-right: 8px;
-    font-size: 1.1em;
-}
-
 /* Títulos con efecto gradiente mejorado */
 .display-4 {
     background: linear-gradient(45deg, var(--primary-color), var(--primary-light));
@@ -420,305 +370,6 @@ footer a:hover {
     transform: scale(1.02);
 }
 
-/* Estilos para CV mejorados */
-.navbar-cv {
-    background: linear-gradient(45deg, var(--primary-color), var(--primary-light));
-    padding: 15px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: var(--shadow-medium);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    backdrop-filter: blur(10px);
-}
-
-.navbar-content {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-
-.nav-link {
-    color: var(--white);
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 500;
-    transition: all var(--transition-medium);
-    position: relative;
-}
-
-.nav-link::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -5px;
-    left: 50%;
-    background: var(--accent-color);
-    transition: all var(--transition-medium);
-    transform: translateX(-50%);
-}
-
-.nav-link:hover {
-    color: var(--accent-color);
-}
-
-.nav-link:hover::after {
-    width: 100%;
-}
-
-/* Contenedor principal del CV mejorado */
-.main {
-    background: var(--white);
-    width: 90%;
-    max-width: 700px;
-    margin: 100px auto 40px;
-    display: flex;
-    flex-direction: row;
-    box-shadow: var(--shadow-heavy);
-    border-radius: var(--border-radius);
-    overflow: hidden;
-    position: relative;
-}
-
-.main::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
-}
-
-.left, .right {
-    padding: 30px;
-}
-
-.left {
-    width: 220px;
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
-    color: var(--white);
-    position: relative;
-}
-
-.left::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 1px;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.2);
-}
-
-.right {
-    width: calc(100% - 220px);
-    background: var(--white);
-}
-
-/* Imagen de perfil mejorada */
-.profile-img {
-    height: 160px;
-    width: 160px;
-    background-color: var(--secondary-color);
-    border-radius: 50%;
-    margin: 0 auto 30px;
-    border: 4px solid var(--white);
-    box-shadow: var(--shadow-medium);
-    overflow: hidden;
-    transition: all var(--transition-medium);
-    position: relative;
-}
-
-.profile-img::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
-    border-radius: 50%;
-    pointer-events: none;
-}
-
-.profile-img:hover {
-    transform: scale(1.05);
-    box-shadow: var(--shadow-heavy);
-}
-
-.profile-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Secciones del CV mejoradas */
-.box-1, .box-2 {
-    margin-bottom: 30px;
-}
-
-.heading {
-    background: linear-gradient(45deg, var(--secondary-color), #606060);
-    padding: 12px 15px;
-    color: var(--white);
-    text-align: left;
-    margin-right: -15px;
-    position: relative;
-    font-weight: 600;
-    border-radius: 5px 0 0 5px;
-    box-shadow: var(--shadow-light);
-}
-
-.heading::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-left: 15px solid #606060;
-    border-top: 21px solid transparent;
-    border-bottom: 21px solid transparent;
-    right: -15px;
-    top: 0;
-}
-
-.p1, .p2, .p3 {
-    font-size: 12px;
-    padding: 12px 15px;
-    line-height: 1.6;
-    background: rgba(255, 255, 255, 0.1);
-    margin: 5px 0;
-    border-radius: 5px;
-}
-
-.icons1, .icons2, .icons3 {
-    vertical-align: middle;
-    margin-right: 12px;
-    color: var(--accent-color);
-}
-
-/* Barras de habilidades mejoradas */
-.skill-container {
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
-    margin: 8px 0;
-    position: relative;
-    height: 12px;
-    overflow: hidden;
-}
-
-.skill {
-    height: 100%;
-    border-radius: 10px;
-    background: linear-gradient(45deg, var(--white), rgba(255, 255, 255, 0.8));
-    position: relative;
-    transition: width 1s ease-in-out;
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-}
-
-.skill::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-    animation: shimmer 2s infinite;
-}
-
-@keyframes shimmer {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(100%); }
-}
-
-.skill-percentage {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 11px;
-    color: var(--text-dark);
-    font-weight: 600;
-}
-
-/* Hobbies mejorados */
-.h-div {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 15px;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.h-div i {
-    font-size: 1.5em;
-    color: var(--accent-color);
-    transition: all var(--transition-fast);
-    padding: 8px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
-}
-
-.h-div i:hover {
-    transform: scale(1.2);
-    background: rgba(255, 255, 255, 0.2);
-}
-
-/* Sección derecha del CV mejorada */
-.name-div {
-    text-align: center;
-    margin-bottom: 40px;
-    padding: 20px;
-    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow-light);
-}
-
-.name-div h1 {
-    font-size: 28px;
-    margin-bottom: 10px;
-    color: var(--text-dark);
-    font-weight: 700;
-}
-
-.name-div p {
-    font-size: 16px;
-    color: var(--text-light);
-    font-weight: 500;
-}
-
-.box-2 h2 {
-    font-size: 18px;
-    margin-bottom: 20px;
-    color: var(--text-dark);
-    font-weight: 600;
-    border-bottom: 2px solid var(--primary-color);
-    padding-bottom: 5px;
-}
-
-.box-2 .p3 {
-    font-size: 14px;
-    color: var(--text-light);
-    background: #f8f9fa;
-    padding: 15px;
-    border-radius: 5px;
-    margin: 10px 0;
-    border-left: 4px solid var(--primary-color);
-}
-
-.box-2 .p3 span {
-    color: var(--text-dark);
-    font-weight: 600;
-    display: block;
-    margin-bottom: 5px;
-}
-
 /* Animaciones */
 @keyframes fadeInUp {
     from {
@@ -733,116 +384,6 @@ footer a:hover {
 
 .fade-in-up {
     animation: fadeInUp 0.6s ease-out;
-}
-
-/* Responsive mejorado */
-@media (max-width: 768px) {
-    body {
-        padding-top: 70px;
-    }
-
-    .display-4 {
-        font-size: 2.2rem;
-    }
-
-    .main {
-        width: 95%;
-        margin-top: 80px;
-        flex-direction: column;
-    }
-
-    .left, .right {
-        width: 100%;
-        padding: 20px;
-    }
-
-    .profile-img {
-        width: 140px;
-        height: 140px;
-    }
-
-    .heading::after {
-        display: none;
-    }
-
-    .name-div h1 {
-        font-size: 22px;
-    }
-
-    .navbar-cv {
-        padding: 12px 20px;
-    }
-
-    .navbar-content {
-        gap: 15px;
-    }
-
-    .btn-download, .btn-regresar {
-        padding: 10px 20px;
-        font-size: 14px;
-    }
-
-    #about img {
-        width: 180px;
-        height: 180px;
-    }
-
-    .skill-icon, .tech-icon {
-        width: 50px;
-        height: 50px;
-    }
-
-    .carousel-item img {
-        height: 320px;
-    }
-
-    section {
-        padding: 60px 0;
-    }
-}
-
-@media (max-width: 480px) {
-    .display-4 {
-        font-size: 1.8rem;
-    }
-
-    .profile-img {
-        width: 120px;
-        height: 120px;
-    }
-
-    .name-div h1 {
-        font-size: 20px;
-    }
-
-    .navbar-cv {
-        padding: 10px 15px;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .navbar-content {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .skill-icon, .tech-icon {
-        width: 45px;
-        height: 45px;
-    }
-
-    .carousel-item img {
-        height: 280px;
-    }
-
-    section {
-        padding: 40px 0;
-    }
-
-    .btn-download, .btn-regresar {
-        padding: 8px 16px;
-        font-size: 13px;
-    }
 }
 
 /* Efectos de scroll */
@@ -872,11 +413,57 @@ footer a:hover {
 
 /* Focus states mejorados */
 .btn-primary:focus,
-.btn-download:focus,
-.btn-regresar:focus,
 .nav-link:focus {
     outline: 2px solid var(--accent-color);
     outline-offset: 2px;
+}
+
+/* Responsive mejorado */
+@media (max-width: 768px) {
+    body {
+        padding-top: 70px;
+    }
+
+    .display-4 {
+        font-size: 2.2rem;
+    }
+
+    #about img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .skill-icon, .tech-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .carousel-item img {
+        height: 320px;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .display-4 {
+        font-size: 1.8rem;
+    }
+
+    .skill-icon, .tech-icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    .carousel-item img {
+        height: 280px;
+    }
+
+    section {
+        padding: 40px 0;
+    }
 }
 
 /* Hover states para dispositivos táctiles */
