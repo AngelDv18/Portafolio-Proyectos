@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>CV - Angel David Garcia Garcia</title>
+    <!-- Cargar html2pdf desde CDN más estable -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <link rel="stylesheet" href="cv.css">
+    
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a class="nav-button btn-back" href="../index.html">
+                <span class="icon icon-back"></span>
+                Regresar
+            </a>
+            <button class="nav-button btn-download" onclick="descargarCV()">
+                <span class="icon icon-download"></span>
+                Descargar CV
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <div class="cv-container" id="cv-content">
+            <header class="cv-header">
+               <div class="profile-image">
+                    <img id="profileImg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAYAAAA8AXHiAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJkSURBVHgB7d1BjtswEETRpmDf/8q7wQJGI1p2SL4+7+0lJSDIrZ5mSZEkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZL+q7dtOwzD8Hqn3+/3MQzD6/V6DcMwXq/X2+v1enm9Xh/DMHzf9/39fr9t2zAMw+v1er1er9fr9Xq9Xq/X6/V6vV6v1+v1er1er9fr9Xq9Xq/X6/V6vV6v1+v1er1er9fr9Xq9Xq/X6/V6vV6v1+v1er1er9fr9Xq9Xq/X6/V6vV6v1+v1er1er9fr9Xq9Xq/X6/V6vV6v1+v1er1er9fr9Xmlq/wEEEGYFBBBmBQQQZgUEEGYFBBBmBQQQZgUEEGYFBBBmBQQQZgUEEGYFBBBmBQQQZgUEEGYFBBBmBQQQZgUEEGYFBBBmBQQQZgUEEGYFBBBmBQQQZgUEEGYFBBBmBQQQZgUEEGYFBBBmBQQQZgUEEGYFBBBmBQQQZgUEEGYFBBBmBQQQZgUEEGYFBBBmBQQQZgUEEGYFBBBmBQQQZgUEEGYFBBBmBQQQZgUEEGYFBBBmBQQQZgUEEGYFBBBmBQQQZgUEEGYFBBBmBQQQZgUEEGYFBBBmBQQQZgUEEGYFBBBmBQQQZgUEEGYFBBBmBQQQZgUEEGYFBBBmBQQQZgUEEGYFBBBmBQQQZgUEEGYFBBBmBQQQZgUEEGYFBBBmBQQQZgUEEGYFBBBmBQQQZgUEEGYFBBBmBQQQZgUEEGYFBBBmBQQQZgUEEGYFBBBmBQQQZgUEEGYFJD7BlCl" alt="Foto de perfil Angel David Garcia Garcia">
+                </div>
+                <h1>Angel David Garcia Garcia</h1>
+                <p class="subtitle">Desarrollador Front-End | Estudiante de Ingeniería de Software</p>
+            </header>
+
+            <div class="cv-grid">
+                <aside class="sidebar">
+                    <section class="section contact">
+                        <h3 class="section-title">
+                            <span class="icon icon-contact"></span>
+                            Contacto
+                        </h3>
+                        <div class="contact-item">
+                            <span class="icon icon-phone"></span>
+                            <span>+(52) 998-342-4916</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="icon icon-email"></span>
+                            <span>angeldavidg879@gmail.com</span>
+                        </div>
+                    </section>
+
+                    <section class="section skills">
+                        <h3 class="section-title">
+                            <span class="icon icon-code"></span>
+                            Habilidades Técnicas
+                        </h3>
+                        
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">HTML5, CSS3</span>
+                                <span class="skill-level intermedio">Intermedio</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress intermedio"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">C#, .NET</span>
+                                <span class="skill-level intermedio">Intermedio</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress intermedio"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-level basico">Básico</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress basico"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Bases de Datos</span>
+                                <span class="skill-level basico">Básico</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress basico"></div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="section soft-skills">
+                        <h3 class="section-title">
+                            <span class="icon icon-psychology"></span>
+                            Habilidades Blandas
+                        </h3>
+                        
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Diseño Web</span>
+                                <span class="skill-level intermedio">Intermedio</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress intermedio"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Desarrollo Front-End</span>
+                                <span class="skill-level intermedio">Intermedio</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress intermedio"></div>
+                            </div>
+                        </div>
+                    </section>
+                </aside>
+
+                <main class="main-content">
+                    <section class="content-section">
+                        <h2>
+                            <span class="icon icon-person"></span>
+                            Sobre Mí
+                        </h2>
+                        <p class="about-text">
+                            Apasionado por el desarrollo web, cuento con habilidades sólidas en 
+                            programación y diseño de interfaces. Mis proyectos académicos en Ingeniería de 
+                            Software me han permitido adquirir una perspectiva creativa y técnica que aplico 
+                            en la creación de aplicaciones modernas y eficientes.
+                        </p>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>
+                            <span class="icon icon-school"></span>
+                            Formación Académica
+                        </h2>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-date">Septiembre 2022 - Presente</div>
+                            <h4 class="timeline-title">Ingeniería en Software</h4>
+                            <p class="timeline-subtitle">Universidad Politécnica de Quintana Roo</p>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-date">Agosto 2019 - Junio 2021</div>
+                            <h4 class="timeline-title">Bachillerato en Informática</h4>
+                            <p class="timeline-subtitle">Colegio de Bachilleres Plantel Cancún 4</p>
+                        </div>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>
+                            <span class="icon icon-work"></span>
+                            Experiencia Laboral
+                        </h2>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-date">Mayo 2024 - Agosto 2024</div>
+                            <h4 class="timeline-title">Practicante de Mantenimiento</h4>
+                            <p class="timeline-subtitle">Hotel Breathless Cancún Soul Resort & Spa - Cancún, Quintana Roo</p>
+                            <div class="timeline-description">
+                                <ul>
+                                    <li>Inspección de instalaciones para detectar fallos</li>
+                                    <li>Gestión y apoyo al personal técnico en reparaciones</li>
+                                    <li>Creación de Aplicación de Escritorio para Inventario de Almacén</li>
+                                    <li>Colaboración con departamento de IT en integración de herramientas digitales</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-date">Agosto 2024 - Noviembre 2024</div>
+                            <h4 class="timeline-title">Practicante Administrativo</h4>
+                            <p class="timeline-subtitle">Embotelladoras Bepensa S.A de C.V. - Progreso, Yucatán</p>
+                            <div class="timeline-description">
+                                <ul>
+                                    <li>Organización de archivo documental en Recursos Humanos</li>
+                                    <li>Asistencia en coordinación de eventos laborales</li>
+                                    <li>Mantenimiento de documentación y base de datos del personal</li>
+                                    <li>Gestión y control de contratos laborales</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="cv.js"></script>
+</body>
+</html>
