@@ -1,4 +1,4 @@
-     * {
+ * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -6,7 +6,7 @@
 
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #000000 0%, #ff0000 100%);
             min-height: 100vh;
             padding: 20px;
         }
@@ -16,7 +16,7 @@
             top: 0;
             left: 0;
             right: 0;
-            background:  rgba(126, 26, 26, 0.95);
+            background: rgba(24, 34, 62, 0.95);
             backdrop-filter: blur(10px);
             z-index: 1000;
             padding: 15px 0;
@@ -28,6 +28,7 @@
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
+            align-items: center;
             padding: 0 20px;
         }
 
@@ -43,6 +44,7 @@
             transition: all 0.3s ease;
             cursor: pointer;
             font-family: Arial, sans-serif;
+            font-size: 14px;
         }
 
         .btn-back {
@@ -74,7 +76,7 @@
         }
 
         .cv-header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #e63333 0%, #da4444 100%);
             color: white;
             padding: 40px;
             text-align: center;
@@ -157,6 +159,7 @@
 
         .contact-item span {
             font-size: 0.9rem;
+            word-break: break-all;
         }
 
         .skill-item {
@@ -168,6 +171,7 @@
             justify-content: space-between;
             align-items: center;
             margin-bottom: 6px;
+            flex-wrap: wrap;
         }
 
         .skill-name {
@@ -290,25 +294,6 @@
             left: 0;
         }
 
-        /* Estilos específicos para impresión/PDF */
-        @media print {
-            .navbar {
-                display: none !important;
-            }
-            
-            body {
-                background: white !important;
-                padding: 0 !important;
-            }
-            
-            .cv-container {
-                box-shadow: none !important;
-                border-radius: 0 !important;
-                margin: 0 !important;
-                max-width: none !important;
-            }
-        }
-
         .icon {
             width: 20px;
             height: 20px;
@@ -326,3 +311,283 @@
         .icon-work::before { content: "💼"; }
         .icon-download::before { content: "⬇️"; }
         .icon-back::before { content: "←"; }
+
+        /* RESPONSIVE DESIGN */
+
+        /* Tablets (768px y menor) */
+        @media screen and (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .cv-container {
+                border-radius: 10px;
+                margin: 0 auto;
+                max-width: 100%;
+            }
+
+            .cv-header {
+                padding: 30px 20px;
+            }
+
+            .cv-header h1 {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            .profile-image {
+                width: 100px;
+                height: 100px;
+            }
+
+            .cv-grid {
+                flex-direction: column;
+                min-height: auto;
+            }
+
+            .sidebar {
+                width: 100%;
+                padding: 20px;
+                order: 2;
+            }
+
+            .main-content {
+                padding: 20px;
+                order: 1;
+            }
+
+            .nav-container {
+                padding: 0 15px;
+            }
+
+            .nav-button {
+                padding: 8px 15px;
+                font-size: 13px;
+            }
+
+            .section-title {
+                font-size: 1.1rem;
+            }
+
+            .content-section h2 {
+                font-size: 1.3rem;
+            }
+
+            .timeline-item {
+                padding: 15px;
+            }
+        }
+
+        /* Móviles (480px y menor) */
+        @media screen and (max-width: 480px) {
+            body {
+                padding: 5px;
+            }
+
+            main {
+                margin-top: 70px;
+            }
+
+            .navbar {
+                padding: 10px 0;
+            }
+
+            .nav-container {
+                padding: 0 10px;
+            }
+
+            .nav-button {
+                padding: 6px 12px;
+                font-size: 12px;
+                gap: 4px;
+            }
+
+            .cv-header {
+                padding: 20px 15px;
+            }
+
+            .cv-header h1 {
+                font-size: 1.8rem;
+                margin-bottom: 8px;
+            }
+
+            .subtitle {
+                font-size: 0.9rem;
+                line-height: 1.4;
+            }
+
+            .profile-image {
+                width: 80px;
+                height: 80px;
+                margin-bottom: 15px;
+            }
+
+            .sidebar,
+            .main-content {
+                padding: 15px;
+            }
+
+            .section {
+                margin-bottom: 20px;
+            }
+
+            .section-title {
+                font-size: 1rem;
+                margin-bottom: 15px;
+            }
+
+            .content-section h2 {
+                font-size: 1.2rem;
+                margin-bottom: 15px;
+            }
+
+            .contact-item {
+                padding: 6px;
+                margin-bottom: 8px;
+            }
+
+            .contact-item span {
+                font-size: 0.8rem;
+            }
+
+            .skill-header {
+                margin-bottom: 4px;
+            }
+
+            .skill-name {
+                font-size: 0.8rem;
+            }
+
+            .skill-level {
+                font-size: 0.7rem;
+                padding: 2px 6px;
+                margin-top: 2px;
+            }
+
+            .about-text {
+                font-size: 0.9rem;
+                line-height: 1.5;
+            }
+
+            .timeline-item {
+                padding: 12px;
+                margin-bottom: 15px;
+            }
+
+            .timeline-date {
+                font-size: 0.8rem;
+                margin-bottom: 6px;
+            }
+
+            .timeline-title {
+                font-size: 1rem;
+                line-height: 1.3;
+            }
+
+            .timeline-subtitle {
+                font-size: 0.85rem;
+                margin-bottom: 10px;
+                line-height: 1.3;
+            }
+
+            .timeline-description li {
+                font-size: 0.8rem;
+                line-height: 1.4;
+                margin-bottom: 4px;
+            }
+
+            .icon {
+                width: 16px;
+                height: 16px;
+            }
+        }
+
+        /* Móviles muy pequeños (320px y menor) */
+        @media screen and (max-width: 320px) {
+            .cv-header h1 {
+                font-size: 1.6rem;
+            }
+
+            .subtitle {
+                font-size: 0.85rem;
+            }
+
+            .nav-button {
+                padding: 5px 8px;
+                font-size: 11px;
+            }
+
+            .nav-button .icon {
+                width: 14px;
+                height: 14px;
+            }
+
+            .timeline-subtitle {
+                font-size: 0.8rem;
+            }
+
+            .about-text {
+                font-size: 0.85rem;
+            }
+        }
+
+        /* Estilos específicos para impresión/PDF */
+        @media print {
+            .navbar {
+                display: none !important;
+            }
+            
+            body {
+                background: white !important;
+                padding: 0 !important;
+            }
+            
+            main {
+                margin-top: 0 !important;
+            }
+            
+            .cv-container {
+                box-shadow: none !important;
+                border-radius: 0 !important;
+                margin: 0 !important;
+                max-width: none !important;
+            }
+
+            .cv-grid {
+                flex-direction: row;
+            }
+
+            .sidebar {
+                width: 300px;
+                order: initial;
+            }
+
+            .main-content {
+                order: initial;
+            }
+        }
+
+        /* Landscape en móviles */
+        @media screen and (max-height: 500px) and (orientation: landscape) {
+            .cv-header {
+                padding: 15px;
+            }
+
+            .profile-image {
+                width: 60px;
+                height: 60px;
+                margin-bottom: 10px;
+            }
+
+            .cv-header h1 {
+                font-size: 1.5rem;
+                margin-bottom: 5px;
+            }
+
+            .subtitle {
+                font-size: 0.8rem;
+            }
+        }
