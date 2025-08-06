@@ -1,0 +1,376 @@
+/* Estilos específicos para Proyecto 2 - Inventario Hotel */
+/* Importar variables del archivo principal */
+@import url('../styles/index.css');
+
+/* Override del navbar para mantener el color original */
+.navbar {
+  background: rgba(26, 26, 46, 0.95) !important;
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Estilos específicos del proyecto Inventario Hotel */
+.project2-container {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+    min-height: 100vh;
+    padding: 2rem 0;
+}
+
+.project2-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(255, 154, 158, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.project2-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(255, 154, 158, 0.25);
+}
+
+.project2-header {
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.project2-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>');
+    opacity: 0.3;
+}
+
+.project2-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
+}
+
+.project2-subtitle {
+    font-size: 1.1rem;
+    opacity: 0.95;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.project2-content {
+    padding: 2rem;
+}
+
+.project2-feature {
+    background: linear-gradient(135deg, #ffeaa7, #fdcb6e);
+    color: #2d3436;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    box-shadow: 0 4px 15px rgba(253, 203, 110, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.project2-feature::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.5s ease;
+}
+
+.project2-feature:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(253, 203, 110, 0.4);
+}
+
+.project2-feature:hover::before {
+    left: 100%;
+}
+
+.project2-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.project2-stat-card {
+    background: rgba(255, 154, 158, 0.1);
+    border: 2px solid rgba(255, 154, 158, 0.3);
+    border-radius: 15px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.project2-stat-card:hover {
+    background: rgba(255, 154, 158, 0.2);
+    border-color: rgba(255, 154, 158, 0.5);
+    transform: scale(1.02);
+}
+
+.project2-stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #e84393;
+    margin-bottom: 0.5rem;
+}
+
+.project2-stat-label {
+    color: #636e72;
+    font-weight: 500;
+}
+
+.project2-tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 1.5rem 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.project2-tech-badge {
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(255, 154, 158, 0.3);
+    transition: all 0.3s ease;
+}
+
+.project2-tech-badge:hover {
+    transform: scale(1.05) rotate(-2deg);
+    box-shadow: 0 4px 16px rgba(255, 154, 158, 0.4);
+}
+
+/* Estilos específicos para las imágenes de tecnologías */
+.tech-icon {
+    width: 40px !important;
+    height: 40px !important;
+    object-fit: contain;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    border-radius: 8px;
+    padding: 2px;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.tech-icon:hover {
+    transform: scale(1.1) rotate(5deg);
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+/* Contenedor para las tecnologías */
+.d-flex.flex-wrap.gap-2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px !important;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.project2-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(255, 154, 158, 0.3);
+    transition: all 0.3s ease;
+    filter: brightness(1.05);
+}
+
+.project2-image:hover {
+    transform: scale(1.02);
+    filter: brightness(1.1);
+}
+
+/* Mejoras para el carrusel */
+.carousel-inner img {
+    border-radius: 15px !important;
+    box-shadow: 0 10px 30px rgba(255, 154, 158, 0.3);
+    transition: all 0.3s ease;
+}
+
+.carousel-item img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 40px rgba(255, 154, 158, 0.4);
+}
+
+/* Estilos para los botones */
+.btn-primary {
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+    border: none;
+    border-radius: 25px;
+    padding: 12px 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(255, 154, 158, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(45deg, #e84393, #ff9a9e);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 154, 158, 0.5);
+}
+
+/* Mejoras para las funcionalidades */
+.list-unstyled li {
+    padding: 8px 0;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.list-unstyled li:hover {
+    padding-left: 10px;
+    color: #e84393;
+}
+
+.bi-check-circle-fill {
+    font-size: 1.2rem;
+    margin-right: 12px;
+    color: #00b894 !important;
+}
+
+/* Mejoras para el contenido */
+.card-body {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(255, 154, 158, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.card-title {
+    color: #2d3436;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.card-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+    border-radius: 2px;
+}
+
+/* Responsive para proyecto 2 */
+@media (max-width: 768px) {
+    .project2-title {
+        font-size: 2rem;
+    }
+    
+    .project2-header {
+        padding: 1.5rem;
+    }
+    
+    .project2-content {
+        padding: 1.5rem;
+    }
+    
+    .project2-image {
+        height: 250px;
+    }
+    
+    .project2-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .project2-stat-number {
+        font-size: 2rem;
+    }
+    
+    .tech-icon {
+        width: 35px !important;
+        height: 35px !important;
+    }
+    
+    .d-flex.flex-wrap.gap-2 {
+        justify-content: center;
+        gap: 8px !important;
+    }
+    
+    .carousel-inner img {
+        height: 300px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .tech-icon {
+        width: 30px !important;
+        height: 30px !important;
+    }
+    
+    .project2-tech-stack {
+        gap: 0.5rem;
+    }
+    
+    .carousel-inner img {
+        height: 250px !important;
+    }
+    
+    .btn-primary {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Animaciones adicionales */
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.tech-icon {
+    animation: fadeInScale 0.6s ease-out;
+}
+
+/* Efecto de brillo para los iconos de tecnología */
+.tech-icon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+    transition: left 0.5s;
+}
+
+.tech-icon:hover::before {
+    left: 100%;
+}

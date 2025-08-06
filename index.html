@@ -4,12 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portafolio - Angel García</title>
+    <meta name="description" content="Portafolio profesional de Angel David García García, Desarrollador Front-end y Estudiante de Ingeniería en Software" />
+    <meta name="keywords" content="desarrollador, frontend, ingeniería software, portafolio, web development" />
 
+    <!-- Favicons -->
     <link
       rel="icon"
       href="https://icons.getbootstrap.com/assets/icons/file-earmark-person.svg"
     />
-
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <link
       rel="icon"
@@ -29,91 +31,584 @@
       href="assets/apple-touch-icon.png"
     />
 
-    <!--lol Bootstrap 5 -->
+    <!-- Bootstrap 5 -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
 
-    <!-- tu estas loco Desde Bootstrap Iconos-->
+    <!-- Bootstrap Icons -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
     <!-- Estilos personalizados -->
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
   </head>
+  
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+      <div class="loading-content">
+        <div class="loading-spinner"></div>
+        <p class="loading-text">Cargando portafolio...</p>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNavbar">
       <div class="container">
+        <a class="navbar-brand fw-bold" href="#home">
+          <i class="bi bi-code-slash me-2"></i>
+          Angel García
+        </a>
+        
         <button
-          class="navbar-toggler"
+          class="navbar-toggler border-0"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
+        
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#about">
-                        <i class="bi bi-person me-1"></i>Acerca de mí
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#skills">
-                        <i class="bi bi-gear me-1"></i>Habilidades
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#projects">
-                        <i class="bi bi-folder me-1"></i>Proyectos
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">
-                        <i class="bi bi-envelope me-1"></i>Contacto
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link btn-cv" href="cv/cv.html">
-                        <i class="bi bi-file-person me-1"></i>Ver CV
-                    </a>
-                </li>
-            </ul>
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">
+                <i class="bi bi-house me-1"></i>Inicio
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">
+                <i class="bi bi-person me-1"></i>Acerca de mí
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">
+                <i class="bi bi-gear me-1"></i>Habilidades
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">
+                <i class="bi bi-folder me-1"></i>Proyectos
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#experience">
+                <i class="bi bi-briefcase me-1"></i>Experiencia
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">
+                <i class="bi bi-envelope me-1"></i>Contacto
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn-cv" href="cv/cv.html" target="_blank">
+                <i class="bi bi-file-person me-1"></i>Ver CV
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
 
-    <main class="container">
-      <header class="text-center py-5 mt-5">
-        <h1 class="display-4 fw-bold">Angel David García Garcia</h1>
-        <p class="lead text-muted">
-          Estudiante de Ingeniería en Software | Desarrollador Front-end
-        </p>
-      </header>
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+      <div class="hero-background">
+        <div class="hero-particles"></div>
+        <div class="hero-gradient"></div>
+      </div>
+      
+      <div class="container">
+        <div class="row min-vh-100 align-items-center">
+          <div class="col-lg-8 mx-auto text-center">
+            <div class="hero-content fade-in-up">
+              <h1 class="hero-title mb-4">
+                <span class="greeting">Hola, soy</span>
+                <span class="name">Angel David García García</span>
+                <span class="typing-text">
+                  <span class="typed-text"></span>
+                  <span class="cursor">&nbsp;</span>
+                </span>
+              </h1>
+              
+              <p class="hero-subtitle mb-5">
+                Estudiante de Ingeniería en Software apasionado por crear 
+                <span class="highlight">soluciones digitales innovadoras</span> 
+                y experiencias web excepcionales.
+              </p>
+              
+              <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary btn-lg me-3">
+                  <i class="bi bi-eye me-2"></i>Ver Proyectos
+                </a>
+                <a href="#contact" class="btn btn-outline-light btn-lg">
+                  <i class="bi bi-chat-dots me-2"></i>Contactar
+                </a>
+              </div>
+              
+              <div class="hero-stats mt-5">
+                <div class="row g-4">
+                  <div class="col-4">
+                    <div class="stat-item">
+                      <div class="stat-number" data-count="20">0</div>
+                      <div class="stat-label">Proyectos</div>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="stat-item">
+                      <div class="stat-number" data-count="9">0</div>
+                      <div class="stat-label">Cuatrimestre</div>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="stat-item">
+                      <div class="stat-number" data-count="7">0</div>
+                      <div class="stat-label">Tecnologías</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="scroll-indicator">
+          <div class="scroll-mouse">
+            <div class="scroll-wheel"></div>
+          </div>
+          <span>Scroll para explorar</span>
+        </div>
+      </div>
+    </section>
 
-      <!-- Sección Acerca de -->
-      <section id="about" class="py-5">
-        <div class="card shadow">
-          <div class="card-body">
-            <div class="row align-items-center">
-              <div class="col-md-4 text-center">
+    <main class="main-content">
+      <!-- About Section -->
+      <section id="about" class="section-padding scroll-reveal">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-5">
+              <div class="about-image-wrapper">
+                <div class="about-image-bg"></div>
                 <img
                   src="images/image_me.png"
-                  class="img-fluid rounded-circle mb-4"
-                  style="width: 200px; height: 200px; object-fit: cover"
+                  alt="Angel David García García"
+                  class="about-image"
+                  loading="lazy"
                 />
+                <div class="about-decoration">
+                  <div class="decoration-dot dot-1"></div>
+                  <div class="decoration-dot dot-2"></div>
+                  <div class="decoration-dot dot-3"></div>
+                </div>
               </div>
-              <div class="col-md-8">
-                <h2 class="h3 mb-4">Acerca de mí</h2>
-                <p class="lead">
-                  Desarrollador front-end con pasión por crear soluciones
-                  digitales innovadoras. Actualmente cursando el 8vo
-                  cuatrimestre de Ingeniería de Software. Experiencia en
-                  desarrollo web y aplicaciones desktop.
+            </div>
+            
+            <div class="col-lg-7">
+              <div class="about-content">
+                <div class="section-badge mb-3">
+                  <i class="bi bi-person-circle me-2"></i>Acerca de mí
+                </div>
+                
+                <h2 class="section-title mb-4">
+                  Creando el futuro digital 
+                  <span class="text-gradient">una línea de código a la vez</span>
+                </h2>
+                
+                <p class="lead mb-4">
+                  Soy un desarrollador front-end apasionado por la tecnología y la innovación. 
+                  Actualmente cursando el <strong>9vo cuatrimestre de Ingeniería de Software</strong>, 
+                  combino conocimientos académicos con experiencia práctica en desarrollo web 
+                  y aplicaciones desktop.
+                </p>
+                
+                <div class="about-highlights mb-4">
+                  <div class="highlight-item">
+                    <i class="bi bi-check-circle-fill text-primary me-3"></i>
+                    <span>3+ años de experiencia en desarrollo web</span>
+                  </div>
+                  <div class="highlight-item">
+                    <i class="bi bi-check-circle-fill text-primary me-3"></i>
+                    <span>Especialización en tecnologías front-end modernas</span>
+                  </div>
+                  <div class="highlight-item">
+                    <i class="bi bi-check-circle-fill text-primary me-3"></i>
+                    <span>Enfoque en UX/UI y mejores prácticas</span>
+                  </div>
+                  <div class="highlight-item">
+                    <i class="bi bi-check-circle-fill text-primary me-3"></i>
+                    <span>Experiencia en aplicaciones desktop con .NET</span>
+                  </div>
+                </div>
+                
+                <div class="about-actions">
+                  <a href="cv/cv.html" class="btn btn-primary me-3" target="_blank">
+                    <i class="bi bi-download me-2"></i>Descargar CV
+                  </a>
+                  <a href="#contact" class="btn btn-outline-primary">
+                    <i class="bi bi-envelope me-2"></i>Contactar
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills" class="section-padding bg-light scroll-reveal">
+        <div class="container">
+          <div class="text-center mb-5">
+            <div class="section-badge mb-3 mx-auto">
+              <i class="bi bi-tools me-2"></i>Habilidades
+            </div>
+            <h2 class="section-title mb-4">
+              Tecnologías y <span class="text-gradient">Herramientas</span>
+            </h2>
+            <p class="section-subtitle">
+              Conjunto de tecnologías que utilizo para crear experiencias digitales excepcionales
+            </p>
+          </div>
+          
+          <div class="skills-grid">
+            <!-- Frontend -->
+            <div class="skill-category">
+              <h4 class="category-title">
+                <i class="bi bi-laptop me-2"></i>Frontend
+              </h4>
+              <div class="skills-row">
+                <div class="skill-item">
+                  <div class="skill-icon-wrapper">
+                    <img src="images/html_5_icon.png" alt="HTML5" class="skill-icon" />
+                  </div>
+                  <span class="skill-name">HTML5</span>
+                  <div class="skill-level">
+                    <div class="skill-progress" data-level="90"></div>
+                  </div>
+                </div>
+                
+                <div class="skill-item">
+                  <div class="skill-icon-wrapper">
+                    <img src="images/css_logo_icon.png" alt="CSS3" class="skill-icon" />
+                  </div>
+                  <span class="skill-name">CSS3</span>
+                  <div class="skill-level">
+                    <div class="skill-progress" data-level="85"></div>
+                  </div>
+                </div>
+                
+                <div class="skill-item">
+                  <div class="skill-icon-wrapper">
+                    <img src="images/icon_javascript.png" alt="JavaScript" class="skill-icon" />
+                  </div>
+                  <span class="skill-name">JavaScript</span>
+                  <div class="skill-level">
+                    <div class="skill-progress" data-level="80"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Backend & Desktop -->
+            <div class="skill-category">
+              <h4 class="category-title">
+                <i class="bi bi-server me-2"></i>Backend & Desktop
+              </h4>
+              <div class="skills-row">
+                <div class="skill-item">
+                  <div class="skill-icon-wrapper">
+                    <img src="images/c_sharp_icon.png" alt="C#" class="skill-icon" />
+                  </div>
+                  <span class="skill-name">C#</span>
+                  <div class="skill-level">
+                    <div class="skill-progress" data-level="85"></div>
+                  </div>
+                </div>
+                
+                <div class="skill-item">
+                  <div class="skill-icon-wrapper">
+                    <img src="images/net_core_icon.png" alt=".NET" class="skill-icon" />
+                  </div>
+                  <span class="skill-name">.NET</span>
+                  <div class="skill-level">
+                    <div class="skill-progress" data-level="80"></div>
+                  </div>
+                </div>
+                
+                <div class="skill-item">
+                  <div class="skill-icon-wrapper">
+                    <img src="images/icon_python.png" alt="Python" class="skill-icon" />
+                  </div>
+                  <span class="skill-name">Python</span>
+                  <div class="skill-level">
+                    <div class="skill-progress" data-level="75"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Database -->
+            <div class="skill-category">
+              <h4 class="category-title">
+                <i class="bi bi-database me-2"></i>Base de Datos
+              </h4>
+              <div class="skills-row">
+                <div class="skill-item">
+                  <div class="skill-icon-wrapper">
+                    <img src="images/mysql_logo_icon.png" alt="MySQL" class="skill-icon" />
+                  </div>
+                  <span class="skill-name">MySQL</span>
+                  <div class="skill-level">
+                    <div class="skill-progress" data-level="80"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="section-padding scroll-reveal">
+        <div class="container">
+          <div class="text-center mb-5">
+            <div class="section-badge mb-3 mx-auto">
+              <i class="bi bi-collection me-2"></i>Proyectos
+            </div>
+            <h2 class="section-title mb-4">
+              Mis <span class="text-gradient">Trabajos Destacados</span>
+            </h2>
+            <p class="section-subtitle">
+              Una selección de proyectos que demuestran mis habilidades y experiencia
+            </p>
+          </div>
+          
+          <!-- Projects Filter -->
+          <div class="projects-filter text-center mb-5">
+            <button class="filter-btn active" data-filter="all">
+              <i class="bi bi-grid me-2"></i>Todos
+            </button>
+            <button class="filter-btn" data-filter="desktop">
+              <i class="bi bi-laptop me-2"></i>Desktop
+            </button>
+            <button class="filter-btn" data-filter="web">
+              <i class="bi bi-globe me-2"></i>Web
+            </button>
+          </div>
+          
+          <div class="projects-grid">
+            <!-- Project 1 - SIGIE -->
+            <div class="project-card" data-category="desktop">
+              <div class="project-image-wrapper">
+                <img
+                  src="images/sigie.png"
+                  alt="Aplicación SIGIE"
+                  class="project-image"
+                  loading="lazy"
+                />
+                <div class="project-overlay">
+                  <div class="project-actions">
+                    <a href="views_projects/proyect1.html" class="action-btn" title="Ver detalles">
+                      <i class="bi bi-eye"></i>
+                    </a>
+                    <a href="#" class="action-btn" title="Ver código" target="_blank">
+                      <i class="bi bi-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="project-content">
+                <div class="project-meta">
+                  <span class="project-category">Desktop App</span>
+                  <span class="project-year">2024</span>
+                </div>
+                
+                <h3 class="project-title">Aplicación SIGIE</h3>
+                <p class="project-description">
+                  Sistema integral de gestión empresarial desarrollado con .NET, 
+                  enfocado en optimizar procesos administrativos y operativos.
+                </p>
+                
+                <div class="project-tech">
+                  <span class="tech-badge">C#</span>
+                  <span class="tech-badge">.NET</span>
+                  <span class="tech-badge">SQL</span>
+                </div>
+                
+                <a href="views_projects/proyect1.html" class="project-link">
+                  Ver Resumen <i class="bi bi-arrow-right ms-2"></i>
+                </a>
+              </div>
+            </div>
+            
+            <!-- Project 2 - Inventario Hotel -->
+            <div class="project-card" data-category="desktop">
+              <div class="project-image-wrapper">
+                <img
+                  src="images/invent.png"
+                  alt="Inventario Hotel"
+                  class="project-image"
+                  loading="lazy"
+                />
+                <div class="project-overlay">
+                  <div class="project-actions">
+                    <a href="views_projects/proyect2.html" class="action-btn" title="Ver detalles">
+                      <i class="bi bi-eye"></i>
+                    </a>
+                    <a href="#" class="action-btn" title="Ver código" target="_blank">
+                      <i class="bi bi-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="project-content">
+                <div class="project-meta">
+                  <span class="project-category">Desktop App</span>
+                  <span class="project-year">2024</span>
+                </div>
+                
+                <h3 class="project-title">Inventario Hotel</h3>
+                <p class="project-description">
+                  Sistema de gestión de inventario especializado para hoteles, 
+                  con control de stock y generación de reportes automatizados.
+                </p>
+                
+                <div class="project-tech">
+                  <span class="tech-badge">C#</span>
+                  <span class="tech-badge">.NET</span>
+                  <span class="tech-badge">MySQL</span>
+                </div>
+                
+                <a href="views_projects/proyect2.html" class="project-link">
+                  Ver Resumen <i class="bi bi-arrow-right ms-2"></i>
+                </a>
+              </div>
+            </div>
+            
+            <!-- Project 3 - Clínica UPQROO -->
+            <div class="project-card" data-category="web">
+              <div class="project-image-wrapper">
+                <img
+                  src="images/clinic.png"
+                  alt="Clínica UPQROO"
+                  class="project-image"
+                  loading="lazy"
+                />
+                <div class="project-overlay">
+                  <div class="project-actions">
+                    <a href="views_projects/proyect3.html" class="action-btn" title="Ver detalles">
+                      <i class="bi bi-eye"></i>
+                    </a>
+                    <a href="#" class="action-btn" title="Ver código" target="_blank">
+                      <i class="bi bi-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="project-content">
+                <div class="project-meta">
+                  <span class="project-category">Web App</span>
+                  <span class="project-year">2024</span>
+                </div>
+                
+                <h3 class="project-title">Clínica UPQROO</h3>
+                <p class="project-description">
+                  Sitio web para consultorio de fisioterapia de la universidad, 
+                  con sistema de citas y gestión de pacientes.
+                </p>
+                
+                <div class="project-tech">
+                  <span class="tech-badge">HTML</span>
+                  <span class="tech-badge">CSS</span>
+                  <span class="tech-badge">JavaScript</span>
+                </div>
+                
+                <a href="views_projects/proyect3.html" class="project-link">
+                  Ver Resumen <i class="bi bi-arrow-right ms-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="text-center mt-5">
+            <a href="https://github.com/AngelDv18" class="btn btn-outline-primary btn-lg" target="_blank">
+              <i class="bi bi-github me-2"></i>Ver todos en GitHub
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience Section -->
+      <section id="experience" class="section-padding bg-light scroll-reveal">
+        <div class="container">
+          <div class="text-center mb-5">
+            <div class="section-badge mb-3 mx-auto">
+              <i class="bi bi-briefcase me-2"></i>Experiencia
+            </div>
+            <h2 class="section-title mb-4">
+              Mi <span class="text-gradient">Trayectoria</span>
+            </h2>
+            <p class="section-subtitle">
+              El camino recorrido en mi formación y desarrollo profesional
+            </p>
+          </div>
+          
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-marker">
+                <i class="bi bi-mortarboard"></i>
+              </div>
+              <div class="timeline-content">
+                <div class="timeline-period">2021 - Presente</div>
+                <h4 class="timeline-title">Ingeniería en Software</h4>
+                <p class="timeline-company">Universidad Politécnica de Quintana Roo</p>
+                <p class="timeline-description">
+                  Formación integral en desarrollo de software, metodologías ágiles, 
+                  bases de datos y arquitectura de sistemas. Actualmente en 9no cuatrimestre.
+                </p>
+              </div>
+            </div>
+            
+            <div class="timeline-item">
+              <div class="timeline-marker">
+                <i class="bi bi-code-slash"></i>
+              </div>
+              <div class="timeline-content">
+                <div class="timeline-period">2023 - Presente</div>
+                <h4 class="timeline-title">Desarrollador Frontend</h4>
+                <p class="timeline-company">Proyectos Freelance</p>
+                <p class="timeline-description">
+                  Desarrollo de aplicaciones web y sistemas de escritorio, 
+                  con enfoque en experiencia de usuario y mejores prácticas de desarrollo.
+                </p>
+              </div>
+            </div>
+            
+            <div class="timeline-item">
+              <div class="timeline-marker">
+                <i class="bi bi-laptop"></i>
+              </div>
+              <div class="timeline-content">
+                <div class="timeline-period">2022 - 2023</div>
+                <h4 class="timeline-title">Desarrollo de Aplicaciones Desktop</h4>
+                <p class="timeline-company">Proyectos Académicos</p>
+                <p class="timeline-description">
+                  Creación de sistemas de gestión empresarial utilizando .NET Framework 
+                  y bases de datos relacionales para diferentes sectores.
                 </p>
               </div>
             </div>
@@ -121,250 +616,221 @@
         </div>
       </section>
 
-      <!-- Sección Habilidades -->
-      <section id="skills" class="py-5">
-        <div class="card shadow">
-          <div class="card-body">
-            <h2 class="h3 mb-4 text-center">Mis Habilidades</h2>
-            <div class="row justify-content-center">
-              <div class="col-auto text-center">
-                <img
-                  src="images/html_5_icon.png"
-                  alt="HTML5"
-                  class="skill-icon"
-                />
-                <p class="mt-2">HTML5</p>
+      <!-- Contact Section -->
+      <section id="contact" class="section-padding scroll-reveal">
+        <div class="container">
+          <div class="text-center mb-5">
+            <div class="section-badge mb-3 mx-auto">
+              <i class="bi bi-chat-dots me-2"></i>Contacto
+            </div>
+            <h2 class="section-title mb-4">
+              ¿Tienes un proyecto en mente? 
+              <span class="text-gradient">¡Hablemos!</span>
+            </h2>
+            <p class="section-subtitle">
+              Siempre estoy interesado en nuevas oportunidades y proyectos desafiantes
+            </p>
+          </div>
+          
+          <div class="row g-5">
+            <!-- Contact Info -->
+            <div class="col-lg-5">
+              <div class="contact-info">
+                <h4 class="mb-4">Información de Contacto</h4>
+                
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <i class="bi bi-envelope-fill"></i>
+                  </div>
+                  <div class="contact-details">
+                    <h5>Email</h5>
+                    <a href="mailto:angeldavidg879@gmail.com">angeldavidg879@gmail.com</a>
+                  </div>
+                </div>
+                
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <i class="bi bi-geo-alt-fill"></i>
+                  </div>
+                  <div class="contact-details">
+                    <h5>Ubicación</h5>
+                    <p>Quintana Roo, México</p>
+                  </div>
+                </div>
+                
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <i class="bi bi-clock-fill"></i>
+                  </div>
+                  <div class="contact-details">
+                    <h5>Disponibilidad</h5>
+                    <p>Lun - Vie, 9:00 AM - 6:00 PM</p>
+                  </div>
+                </div>
+                
+                <div class="social-links mt-4">
+                  <h5 class="mb-3">Sígueme en</h5>
+                  <div class="social-buttons">
+                    <a href="https://github.com/AngelDv18" class="social-btn" target="_blank" title="GitHub">
+                      <i class="bi bi-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/angel-david-garcia-garcia-8b2193233" class="social-btn" target="_blank" title="LinkedIn">
+                      <i class="bi bi-linkedin"></i>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=100021463512496" class="social-btn" target="_blank" title="Facebook">
+                      <i class="bi bi-facebook"></i>
+                    </a>
+                  </div>
+                </div>
               </div>
-              <div class="col-auto text-center">
-                <img
-                  src="images/css_logo_icon.png"
-                  alt="CSS3"
-                  class="skill-icon"
-                />
-                <p class="mt-2">CSS3</p>
-              </div>
-              <div class="col-auto text-center">
-                <img
-                  src="images/icon_javascript.png"
-                  alt="JavaScript"
-                  class="skill-icon"
-                />
-                <p class="mt-2">JavaScript</p>
-              </div>
-              <div class="col-auto text-center">
-                <img
-                  src="images/c_sharp_icon.png"
-                  alt="C#"
-                  class="skill-icon"
-                />
-                <p class="mt-2">C#</p>
-              </div>
-              <div class="col-auto text-center">
-                <img
-                  src="images/icon_python.png"
-                  alt="Python"
-                  class="skill-icon"
-                />
-                <p class="mt-2">Python</p>
-              </div>
-              <div class="col-auto text-center">
-                <img
-                  src="images/net_core_icon.png"
-                  alt=".NET"
-                  class="skill-icon"
-                />
-                <p class="mt-2">.NET</p>
-              </div>
-              <div class="col-auto text-center">
-                <img
-                  src="images/mysql_logo_icon.png"
-                  alt="SQL"
-                  class="skill-icon"
-                />
-                <p class="mt-2">SQL</p>
+            </div>
+            
+            <!-- Contact Form -->
+            <div class="col-lg-7">
+              <div class="contact-form-wrapper">
+                <form class="contact-form" id="contactForm">
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="name" class="form-label">Nombre completo</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-group">
+                        <label for="subject" class="form-label">Asunto</label>
+                        <input type="text" class="form-control" id="subject" name="subject" required>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-group">
+                        <label for="message" class="form-label">Mensaje</label>
+                        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <button type="submit" class="btn btn-primary btn-lg w-100">
+                        <i class="bi bi-send me-2"></i>Enviar Mensaje
+                      </button>
+                    </div>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      <!-- Sección Proyectos -->
-      <section id="projects" class="py-5">
-        <h2 class="h3 mb-4 text-center">Mis Proyectos</h2>
-        <div class="row g-4">
-          <!-- Proyecto 1 -->
-          <div class="col-md-4">
-            <div class="card h-100 shadow">
-              <img
-                src="images/sigie.png"
-                class="card-img-top project-img"
-                alt="Aplicación de Escritorio"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Aplicación (SIGIE)</h5>
-                <p class="card-text text-muted">Aplicación de Escritorio.</p>
-                <a href="views_projects/proyect1.html" class="btn btn-primary"
-                  >Ver Resumen</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- Proyecto 2 -->
-          <div class="col-md-4">
-            <div class="card h-100 shadow">
-              <img
-                src="images/invent.png"
-                class="card-img-top project-img"
-                alt="Inventario Hotel"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Inventario Hotel</h5>
-                <p class="card-text text-muted">
-                  Aplicación de Escritorio para organizaciónes de Almacen.
-                </p>
-                <a href="views_projects/proyect2.html" class="btn btn-primary"
-                  >Ver Resumen</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- Proyecto 3 -->
-          <div class="col-md-4">
-            <div class="card h-100 shadow">
-              <img
-                src="images/clinic.png"
-                class="card-img-top project-img"
-                alt="Clinica - UPQROO"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Clinica UPQROO</h5>
-                <p class="card-text text-muted">
-                  Sitio web para consultorio de la escuela en fisio terapia.
-                </p>
-                <a href="views_projects/proyect3.html" class="btn btn-primary"
-                  >Ver Resumen</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Sección Contacto -->
-      <section id="contact" class="py-5">
-        <div class="card shadow">
-          <div class="card-body">
-            <h2 class="h3 mb-4 text-center">Contacto</h2>
-            <div class="row g-4">
-              <div class="col-md-6 text-center">
-                <div class="mb-4">
-                  <a
-                    href="https://github.com/AngelDv18"
-                    class="text-decoration-none"
-                    target="_blank"
-                  >
-                    <i class="bi bi-github h3 text-primary"></i>
-                  </a>
-                  <h4 class="h5 mt-2">GitHub</h4>
-                  <a
-                    href="https://github.com/AngelDv18"
-                    class="text-decoration-none"
-                    target="_blank"
-                  >
-                  </a>
-                </div>
-                <div class="mb-4">
-                  <a
-                    href="https://www.linkedin.com/in/angel-david-garcia-garcia-8b2193233"
-                    class="text-decoration-none"
-                    target="_blank"
-                  >
-                    <i class="bi bi-linkedin h3 text-primary"></i>
-                  </a>
-                  <h4 class="h5 mt-2">LinkedIn</h4>
-                  <a
-                    href="https://www.linkedin.com/in/angel-david-garcia-garcia-8b2193233"
-                    class="text-decoration-none"
-                    target="_blank"
-                  >
-                  </a>
-                </div>
-                <div class="mb-4">
-                  <a
-                    href="https://www.facebook.com/profile.php?id=100021463512496"
-                    class="text-decoration-none"
-                    target="_blank"
-                  >
-                    <i class="bi bi-facebook h3 text-primary"></i>
-                  </a>
-                  <h4 class="h5 mt-2">Facebook</h4>
-                  <a
-                    href="https://www.facebook.com/profile.php?id=100021463512496"
-                    class="text-decoration-none"
-                    target="_blank"
-                  >
-                  </a>
-                </div>
-              </div>
-              <div class="col-md-6 text-center">
-                <div class="mb-4">
-                  <a
-                    href="mailto:angeldavidg879@gmail.com"
-                    class="text-decoration-none"
-                  >
-                    <i class="bi bi-envelope h3 text-primary"></i>
-                  </a>
-                  <h4 class="h5 mt-2">Correo Electrónico</h4>
-                  <a
-                    href="mailto:angeldavidg879@gmail.com"
-                    class="text-decoration-none"
-                  >
-                  </a>
-                </div>
-                <p class="lead">
-                  ¡Espero que podamos trabajar juntos! No dudes en contactarme.
-                </p>
-              </div>
-            </div>
+          
+          <div class="text-center mt-5">
+            <p class="lead">
+              <i class="bi bi-heart-fill text-danger me-2"></i>
+              ¡Espero que podamos trabajar juntos! No dudes en contactarme.
+            </p>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="bg-dark text-white py-4 mt-5">
-      <div class="container text-center">
-        <p class="mb-0">
-          &copy; 2025 Angel D. García. Todos los derechos reservados.
-        </p>
-        <div class="mt-4">
-          <a
-            href="https://github.com/AngelDv18"
-            class="text-white me-3"
-            target="_blank"
-          >
-            <i class="bi bi-github h4"></i>
-          </a>
-          <a
-            href="https://www.facebook.com/profile.php?id=100021463512496"
-            class="text-white me-3"
-            target="_blank"
-          >
-            <i class="bi bi-facebook h4"></i>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/angel-david-garcia-garcia-8b2193233"
-            class="text-white me-3"
-            target="_blank"
-          >
-            <i class="bi bi-linkedin h4"></i>
-          </a>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="container">
+          <div class="row g-4">
+            <div class="col-lg-4">
+              <div class="footer-brand">
+                <h4 class="mb-3">Angel García</h4>
+                <p class="mb-3">
+                  Desarrollador Frontend especializado en crear experiencias web 
+                  modernas y funcionales. Siempre en busca de nuevos desafíos.
+                </p>
+                <div class="footer-social">
+                  <a href="https://github.com/AngelDv18" class="social-link" target="_blank">
+                    <i class="bi bi-github"></i>
+                  </a>
+                  <a href="https://www.linkedin.com/in/angel-david-garcia-garcia-8b2193233" class="social-link" target="_blank">
+                    <i class="bi bi-linkedin"></i>
+                  </a>
+                  <a href="https://www.facebook.com/profile.php?id=100021463512496" class="social-link" target="_blank">
+                    <i class="bi bi-facebook"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-lg-2 col-6">
+              <div class="footer-links">
+                <h5 class="mb-3">Navegación</h5>
+                <ul class="list-unstyled">
+                  <li><a href="#home">Inicio</a></li>
+                  <li><a href="#about">Acerca de</a></li>
+                  <li><a href="#skills">Habilidades</a></li>
+                  <li><a href="#projects">Proyectos</a></li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="col-lg-2 col-6">
+              <div class="footer-links">
+                <h5 class="mb-3">Recursos</h5>
+                <ul class="list-unstyled">
+                  <li><a href="cv/cv.html" target="_blank">Mi CV</a></li>
+                  <li><a href="#contact">Contacto</a></li>
+                  <li><a href="https://github.com/AngelDv18" target="_blank">GitHub</a></li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="col-lg-4">
+              <div class="footer-contact">
+                <h5 class="mb-3">Información de Contacto</h5>
+                <div class="contact-info-footer">
+                  <div class="contact-item-footer">
+                    <i class="bi bi-envelope me-2"></i>
+                    <a href="mailto:angeldavidg879@gmail.com">angeldavidg879@gmail.com</a>
+                  </div>
+                  <div class="contact-item-footer">
+                    <i class="bi bi-geo-alt me-2"></i>
+                    <span>Quintana Roo, México</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <p class="mb-0">
+                &copy; 2025 Angel D. García. Todos los derechos reservados.
+              </p>
+            </div>
+            <div class="col-md-6 text-md-end">
+              <p class="mb-0">
+                Hecho con <i class="bi bi-heart-fill text-danger"></i> y mucho código
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Volver arriba">
+      <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="scripts/script.js"></script>
   </body>
 </html>
+

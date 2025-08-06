@@ -1,0 +1,466 @@
+/* Estilos específicos para Proyecto 1 - SIGIE */
+/* Importar variables del archivo principal */
+@import url('../styles/index.css');
+
+/* Override del navbar para mantener el color original */
+.navbar {
+  background: rgba(26, 26, 46, 0.95) !important;
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Estilos específicos del proyecto SIGIE */
+.project1-container {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 2rem 0;
+}
+
+.project1-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(102, 126, 234, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.project1-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(102, 126, 234, 0.25);
+}
+
+.project1-header {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.project1-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><polygon points="50,10 90,90 10,90" fill="rgba(255,255,255,0.05)"/></svg>');
+    opacity: 0.3;
+}
+
+.project1-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1;
+}
+
+.project1-subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.project1-content {
+    padding: 2rem;
+}
+
+.project1-feature {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    border-left: 4px solid #667eea;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border-radius: 0 15px 15px 0;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.project1-feature::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.project1-feature:hover {
+    background: linear-gradient(135deg, #e9ecef, #dee2e6);
+    border-left-color: #764ba2;
+    transform: translateX(10px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.2);
+}
+
+.project1-feature:hover::before {
+    left: 100%;
+}
+
+.project1-tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 1.5rem 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.project1-tech-badge {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+    transition: all 0.3s ease;
+}
+
+.project1-tech-badge:hover {
+    transform: scale(1.05) rotate(-2deg);
+    box-shadow: 0 4px 16px rgba(102, 126, 234, 0.4);
+}
+
+/* Estilos específicos para las imágenes de tecnologías */
+.tech-icon {
+    width: 40px !important;
+    height: 40px !important;
+    object-fit: contain;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    border-radius: 8px;
+    padding: 2px;
+    background: rgba(255, 255, 255, 0.9);
+    position: relative;
+    overflow: hidden;
+}
+
+.tech-icon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+    transition: left 0.5s;
+}
+
+.tech-icon:hover {
+    transform: scale(1.1) rotate(5deg);
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+    background: rgba(255, 255, 255, 1);
+}
+
+.tech-icon:hover::before {
+    left: 100%;
+}
+
+/* Contenedor para las tecnologías */
+.d-flex.flex-wrap.gap-2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px !important;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.project1-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+    transition: all 0.3s ease;
+    filter: brightness(1.05);
+}
+
+.project1-image:hover {
+    transform: scale(1.02);
+    filter: brightness(1.1);
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+}
+
+/* Mejoras para el carrusel */
+.carousel-inner img {
+    border-radius: 15px !important;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+    transition: all 0.3s ease;
+}
+
+.carousel-item img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 50px;
+    height: 50px;
+    background: rgba(102, 126, 234, 0.8);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.carousel-control-prev {
+    left: -25px;
+}
+
+.carousel-control-next {
+    right: -25px;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background: rgba(102, 126, 234, 1);
+    opacity: 1;
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* Estilos para los botones */
+.btn-primary {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    border: none;
+    border-radius: 25px;
+    padding: 12px 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(45deg, #764ba2, #667eea);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+}
+
+/* Mejoras para las funcionalidades */
+.list-unstyled li {
+    padding: 8px 0;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.list-unstyled li:hover {
+    padding-left: 10px;
+    color: #667eea;
+}
+
+.bi-check-circle-fill {
+    font-size: 1.2rem;
+    margin-right: 12px;
+    color: #00b894 !important;
+}
+
+/* Mejoras para el contenido */
+.card-body {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(102, 126, 234, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.card-title {
+    color: #2d3436;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.card-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    border-radius: 2px;
+}
+
+/* Efectos de partículas */
+.card-body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 20%, rgba(102, 126, 234, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(118, 75, 162, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Responsive para proyecto 1 */
+@media (max-width: 768px) {
+    .project1-title {
+        font-size: 2rem;
+    }
+    
+    .project1-header {
+        padding: 1.5rem;
+    }
+    
+    .project1-content {
+        padding: 1.5rem;
+    }
+    
+    .project1-image {
+        height: 250px;
+    }
+    
+    .tech-icon {
+        width: 35px !important;
+        height: 35px !important;
+    }
+    
+    .d-flex.flex-wrap.gap-2 {
+        justify-content: center;
+        gap: 8px !important;
+    }
+    
+    .carousel-inner img {
+        height: 300px !important;
+    }
+    
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .carousel-control-prev {
+        left: -20px;
+    }
+    
+    .carousel-control-next {
+        right: -20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .tech-icon {
+        width: 30px !important;
+        height: 30px !important;
+    }
+    
+    .project1-tech-stack {
+        gap: 0.5rem;
+    }
+    
+    .carousel-inner img {
+        height: 250px !important;
+    }
+    
+    .btn-primary {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .carousel-control-prev,
+    .carousel-control-next {
+        position: relative;
+        width: 35px;
+        height: 35px;
+        margin: 10px 5px;
+        top: auto;
+        transform: none;
+    }
+    
+    .carousel-control-prev {
+        left: auto;
+    }
+    
+    .carousel-control-next {
+        right: auto;
+    }
+}
+
+/* Animaciones adicionales */
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.tech-icon {
+    animation: fadeInScale 0.6s ease-out;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.project1-feature {
+    animation: slideInFromLeft 0.6s ease-out;
+}
+
+.project1-feature:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.project1-feature:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.project1-feature:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+/* Efecto de brillo para el título */
+@keyframes shimmer {
+    0% {
+        background-position: -200px 0;
+    }
+    100% {
+        background-position: 200px 0;
+    }
+}
+
+.card-title::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    background-size: 200px 100%;
+    animation: shimmer 3s infinite;
+    z-index: 1;
+}
